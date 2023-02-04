@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>JS</title> 
+    <style>
+    </style>
+    <script>
+        function geraDivs() {
+            var quant = document.getElementById("quantidades").value;
+            var divs = document.getElementsByTagName("div").length;
+               for (index = 1; index <= quant ; index++) { 
+                    var div = document.createElement('div');
+                    div.style.width = "50px";
+                    div.style.height = "50px";
+                    div.style.textAlign = "center";
+                    div.style.display = "inline-block";
+                    div.innerHTML = (divs);
+                    document.getElementById("container").appendChild(div);
+                    div.style.backgroundColor ="red";
+                    div.style.margin="15px";
+                    divs++;
+               } 
+          }
+        
+     
+            
+
+
+    </script>
+</head>
+
+<body>
+   
+    <label>Quantidade</label>
+    <input type="number" id="quantidades">
+    <button onclick="geraDivs()">Clique</button>
+     <div id="container">
+        
+    </div>
+</body>
+
+</html>
